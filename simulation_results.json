@@ -1,0 +1,1596 @@
+{
+  "artifact": {
+    "model": "symbolic-LSI-topology-v1",
+    "script_sha256": "5541ec53f4ea7490ede381a2e9db533caf5dcae49650faebc65238f0906c7ffc",
+    "random_seed": null,
+    "randomness_used": false,
+    "sequence_fixture_warning": "All nucleotide strings are deterministic synthetic fixtures and are not characterized recombination sites or construct designs."
+  },
+  "round_trip": {
+    "restored_exactly": true,
+    "states": [
+      {
+        "name": "start",
+        "active_input": null,
+        "chemistry": null,
+        "sha256": "47ad4b15ab0971444b9d24f3c952976ae6e78b6e5450ee57bc8a33e6485173af",
+        "length_bp": 766,
+        "physical_elements": [
+          "ORI+",
+          "S1(B,+)",
+          "A+",
+          "S2(B,+)",
+          "B+",
+          "S3(B,+)",
+          "C+",
+          "S4(inert,+)",
+          "D+",
+          "S5(P,-)",
+          "E+",
+          "S6(P,-)",
+          "F+",
+          "S7(P,+)"
+        ],
+        "payload_order": [
+          "+A",
+          "+B",
+          "+C",
+          "+D",
+          "+E",
+          "+F"
+        ],
+        "site_accessibility": {
+          "S1": {
+            "system": "LSI-1",
+            "state": "B",
+            "orientation": 1,
+            "accessible": true
+          },
+          "S2": {
+            "system": "LSI-2",
+            "state": "B",
+            "orientation": 1,
+            "accessible": true
+          },
+          "S3": {
+            "system": "LSI-3",
+            "state": "B",
+            "orientation": 1,
+            "accessible": true
+          },
+          "S4": {
+            "system": null,
+            "state": "inert",
+            "orientation": 1,
+            "accessible": false
+          },
+          "S5": {
+            "system": "LSI-1",
+            "state": "P",
+            "orientation": -1,
+            "accessible": true
+          },
+          "S6": {
+            "system": "LSI-3",
+            "state": "P",
+            "orientation": -1,
+            "accessible": true
+          },
+          "S7": {
+            "system": "LSI-2",
+            "state": "P",
+            "orientation": 1,
+            "accessible": true
+          }
+        },
+        "exact_recognition_signature_counts_both_strands": {
+          "LSI-1:B": 1,
+          "LSI-1:P": 1,
+          "LSI-1:L": 0,
+          "LSI-1:R": 0,
+          "LSI-2:B": 1,
+          "LSI-2:P": 1,
+          "LSI-2:L": 0,
+          "LSI-2:R": 0,
+          "LSI-3:B": 1,
+          "LSI-3:P": 1,
+          "LSI-3:L": 0,
+          "LSI-3:R": 0
+        },
+        "possible_cognate_events": [
+          {
+            "input_name": "A",
+            "system": "LSI-1",
+            "chemistry": "Int",
+            "pair_state": "BP",
+            "relative_orientation": "opposite",
+            "outcome": "inversion",
+            "intended": true,
+            "note": "attB x attP intramolecular inversion."
+          },
+          {
+            "input_name": "A",
+            "system": "LSI-1",
+            "chemistry": "Int+RDF",
+            "pair_state": "BP",
+            "relative_orientation": "opposite",
+            "outcome": "inactive_pairing",
+            "intended": false,
+            "note": "Cognate RDF suppresses integration chemistry in the ideal model."
+          },
+          {
+            "input_name": "B",
+            "system": "LSI-2",
+            "chemistry": "Int",
+            "pair_state": "BP",
+            "relative_orientation": "parallel",
+            "outcome": "deletion",
+            "intended": false,
+            "note": "attB x attP direct-repeat recombination excises the interval."
+          },
+          {
+            "input_name": "B",
+            "system": "LSI-2",
+            "chemistry": "Int+RDF",
+            "pair_state": "BP",
+            "relative_orientation": "parallel",
+            "outcome": "inactive_pairing",
+            "intended": false,
+            "note": "Cognate RDF suppresses integration chemistry in the ideal model."
+          },
+          {
+            "input_name": "C",
+            "system": "LSI-3",
+            "chemistry": "Int",
+            "pair_state": "BP",
+            "relative_orientation": "opposite",
+            "outcome": "inversion",
+            "intended": true,
+            "note": "attB x attP intramolecular inversion."
+          },
+          {
+            "input_name": "C",
+            "system": "LSI-3",
+            "chemistry": "Int+RDF",
+            "pair_state": "BP",
+            "relative_orientation": "opposite",
+            "outcome": "inactive_pairing",
+            "intended": false,
+            "note": "Cognate RDF suppresses integration chemistry in the ideal model."
+          }
+        ],
+        "cross_system_events": "inactive in the ideal orthogonality model; pairwise enzyme-site and integrase-RDF crosstalk require empirical measurement",
+        "intermolecular_events": "not represented in the single-molecule state; any second construct copy creates possible cognate integration/cointegrate substrates"
+      },
+      {
+        "name": "forward_1",
+        "active_input": "A",
+        "chemistry": "Int",
+        "sha256": "8b17dd4fc8d781351cbfaa0c7d97b4b30857985a5f67739a5edd15dff304e8fe",
+        "length_bp": 766,
+        "physical_elements": [
+          "ORI+",
+          "S5(L,+)",
+          "D-",
+          "S4(inert,-)",
+          "C-",
+          "S3(B,-)",
+          "B-",
+          "S2(B,-)",
+          "A-",
+          "S1(R,-)",
+          "E+",
+          "S6(P,-)",
+          "F+",
+          "S7(P,+)"
+        ],
+        "payload_order": [
+          "-D",
+          "-C",
+          "-B",
+          "-A",
+          "+E",
+          "+F"
+        ],
+        "site_accessibility": {
+          "S5": {
+            "system": "LSI-1",
+            "state": "L",
+            "orientation": 1,
+            "accessible": true
+          },
+          "S4": {
+            "system": null,
+            "state": "inert",
+            "orientation": -1,
+            "accessible": false
+          },
+          "S3": {
+            "system": "LSI-3",
+            "state": "B",
+            "orientation": -1,
+            "accessible": true
+          },
+          "S2": {
+            "system": "LSI-2",
+            "state": "B",
+            "orientation": -1,
+            "accessible": true
+          },
+          "S1": {
+            "system": "LSI-1",
+            "state": "R",
+            "orientation": -1,
+            "accessible": true
+          },
+          "S6": {
+            "system": "LSI-3",
+            "state": "P",
+            "orientation": -1,
+            "accessible": true
+          },
+          "S7": {
+            "system": "LSI-2",
+            "state": "P",
+            "orientation": 1,
+            "accessible": true
+          }
+        },
+        "exact_recognition_signature_counts_both_strands": {
+          "LSI-1:B": 0,
+          "LSI-1:P": 0,
+          "LSI-1:L": 1,
+          "LSI-1:R": 1,
+          "LSI-2:B": 1,
+          "LSI-2:P": 1,
+          "LSI-2:L": 0,
+          "LSI-2:R": 0,
+          "LSI-3:B": 1,
+          "LSI-3:P": 1,
+          "LSI-3:L": 0,
+          "LSI-3:R": 0
+        },
+        "possible_cognate_events": [
+          {
+            "input_name": "A",
+            "system": "LSI-1",
+            "chemistry": "Int",
+            "pair_state": "LR",
+            "relative_orientation": "opposite",
+            "outcome": "inactive_pairing",
+            "intended": false,
+            "note": "LSI product sites are nominally inactive without cognate RDF; basal reverse activity must still be measured."
+          },
+          {
+            "input_name": "A",
+            "system": "LSI-1",
+            "chemistry": "Int+RDF",
+            "pair_state": "LR",
+            "relative_orientation": "opposite",
+            "outcome": "inversion",
+            "intended": true,
+            "note": "attL x attR intramolecular inverse inversion."
+          },
+          {
+            "input_name": "B",
+            "system": "LSI-2",
+            "chemistry": "Int",
+            "pair_state": "BP",
+            "relative_orientation": "opposite",
+            "outcome": "inversion",
+            "intended": true,
+            "note": "attB x attP intramolecular inversion."
+          },
+          {
+            "input_name": "B",
+            "system": "LSI-2",
+            "chemistry": "Int+RDF",
+            "pair_state": "BP",
+            "relative_orientation": "opposite",
+            "outcome": "inactive_pairing",
+            "intended": false,
+            "note": "Cognate RDF suppresses integration chemistry in the ideal model."
+          },
+          {
+            "input_name": "C",
+            "system": "LSI-3",
+            "chemistry": "Int",
+            "pair_state": "BP",
+            "relative_orientation": "parallel",
+            "outcome": "deletion",
+            "intended": false,
+            "note": "attB x attP direct-repeat recombination excises the interval."
+          },
+          {
+            "input_name": "C",
+            "system": "LSI-3",
+            "chemistry": "Int+RDF",
+            "pair_state": "BP",
+            "relative_orientation": "parallel",
+            "outcome": "inactive_pairing",
+            "intended": false,
+            "note": "Cognate RDF suppresses integration chemistry in the ideal model."
+          }
+        ],
+        "cross_system_events": "inactive in the ideal orthogonality model; pairwise enzyme-site and integrase-RDF crosstalk require empirical measurement",
+        "intermolecular_events": "not represented in the single-molecule state; any second construct copy creates possible cognate integration/cointegrate substrates"
+      },
+      {
+        "name": "forward_2",
+        "active_input": "B",
+        "chemistry": "Int",
+        "sha256": "6c0b75e79d3ea29ee33472b6259a6634cf005bcf08f0d5f57c0d7f116f3d4301",
+        "length_bp": 766,
+        "physical_elements": [
+          "ORI+",
+          "S5(L,+)",
+          "D-",
+          "S4(inert,-)",
+          "C-",
+          "S3(B,-)",
+          "B-",
+          "S7(L,-)",
+          "F-",
+          "S6(P,+)",
+          "E-",
+          "S1(R,+)",
+          "A+",
+          "S2(R,+)"
+        ],
+        "payload_order": [
+          "-D",
+          "-C",
+          "-B",
+          "-F",
+          "-E",
+          "+A"
+        ],
+        "site_accessibility": {
+          "S5": {
+            "system": "LSI-1",
+            "state": "L",
+            "orientation": 1,
+            "accessible": true
+          },
+          "S4": {
+            "system": null,
+            "state": "inert",
+            "orientation": -1,
+            "accessible": false
+          },
+          "S3": {
+            "system": "LSI-3",
+            "state": "B",
+            "orientation": -1,
+            "accessible": true
+          },
+          "S7": {
+            "system": "LSI-2",
+            "state": "L",
+            "orientation": -1,
+            "accessible": true
+          },
+          "S6": {
+            "system": "LSI-3",
+            "state": "P",
+            "orientation": 1,
+            "accessible": true
+          },
+          "S1": {
+            "system": "LSI-1",
+            "state": "R",
+            "orientation": 1,
+            "accessible": true
+          },
+          "S2": {
+            "system": "LSI-2",
+            "state": "R",
+            "orientation": 1,
+            "accessible": true
+          }
+        },
+        "exact_recognition_signature_counts_both_strands": {
+          "LSI-1:B": 0,
+          "LSI-1:P": 0,
+          "LSI-1:L": 1,
+          "LSI-1:R": 1,
+          "LSI-2:B": 0,
+          "LSI-2:P": 0,
+          "LSI-2:L": 1,
+          "LSI-2:R": 1,
+          "LSI-3:B": 1,
+          "LSI-3:P": 1,
+          "LSI-3:L": 0,
+          "LSI-3:R": 0
+        },
+        "possible_cognate_events": [
+          {
+            "input_name": "A",
+            "system": "LSI-1",
+            "chemistry": "Int",
+            "pair_state": "LR",
+            "relative_orientation": "parallel",
+            "outcome": "inactive_pairing",
+            "intended": false,
+            "note": "LSI product sites are nominally inactive without cognate RDF; basal reverse activity must still be measured."
+          },
+          {
+            "input_name": "A",
+            "system": "LSI-1",
+            "chemistry": "Int+RDF",
+            "pair_state": "LR",
+            "relative_orientation": "parallel",
+            "outcome": "deletion",
+            "intended": false,
+            "note": "attL x attR direct-repeat recombination excises the interval."
+          },
+          {
+            "input_name": "B",
+            "system": "LSI-2",
+            "chemistry": "Int",
+            "pair_state": "LR",
+            "relative_orientation": "opposite",
+            "outcome": "inactive_pairing",
+            "intended": false,
+            "note": "LSI product sites are nominally inactive without cognate RDF; basal reverse activity must still be measured."
+          },
+          {
+            "input_name": "B",
+            "system": "LSI-2",
+            "chemistry": "Int+RDF",
+            "pair_state": "LR",
+            "relative_orientation": "opposite",
+            "outcome": "inversion",
+            "intended": true,
+            "note": "attL x attR intramolecular inverse inversion."
+          },
+          {
+            "input_name": "C",
+            "system": "LSI-3",
+            "chemistry": "Int",
+            "pair_state": "BP",
+            "relative_orientation": "opposite",
+            "outcome": "inversion",
+            "intended": true,
+            "note": "attB x attP intramolecular inversion."
+          },
+          {
+            "input_name": "C",
+            "system": "LSI-3",
+            "chemistry": "Int+RDF",
+            "pair_state": "BP",
+            "relative_orientation": "opposite",
+            "outcome": "inactive_pairing",
+            "intended": false,
+            "note": "Cognate RDF suppresses integration chemistry in the ideal model."
+          }
+        ],
+        "cross_system_events": "inactive in the ideal orthogonality model; pairwise enzyme-site and integrase-RDF crosstalk require empirical measurement",
+        "intermolecular_events": "not represented in the single-molecule state; any second construct copy creates possible cognate integration/cointegrate substrates"
+      },
+      {
+        "name": "forward_3",
+        "active_input": "C",
+        "chemistry": "Int",
+        "sha256": "0984db90d882c71cb813f4799f3f8ab83b48af7475e504a7c506feaf16e69ab0",
+        "length_bp": 766,
+        "physical_elements": [
+          "ORI+",
+          "S5(L,+)",
+          "D-",
+          "S4(inert,-)",
+          "C-",
+          "S6(L,-)",
+          "F+",
+          "S7(L,+)",
+          "B+",
+          "S3(R,+)",
+          "E-",
+          "S1(R,+)",
+          "A+",
+          "S2(R,+)"
+        ],
+        "payload_order": [
+          "-D",
+          "-C",
+          "+F",
+          "+B",
+          "-E",
+          "+A"
+        ],
+        "site_accessibility": {
+          "S5": {
+            "system": "LSI-1",
+            "state": "L",
+            "orientation": 1,
+            "accessible": true
+          },
+          "S4": {
+            "system": null,
+            "state": "inert",
+            "orientation": -1,
+            "accessible": false
+          },
+          "S6": {
+            "system": "LSI-3",
+            "state": "L",
+            "orientation": -1,
+            "accessible": true
+          },
+          "S7": {
+            "system": "LSI-2",
+            "state": "L",
+            "orientation": 1,
+            "accessible": true
+          },
+          "S3": {
+            "system": "LSI-3",
+            "state": "R",
+            "orientation": 1,
+            "accessible": true
+          },
+          "S1": {
+            "system": "LSI-1",
+            "state": "R",
+            "orientation": 1,
+            "accessible": true
+          },
+          "S2": {
+            "system": "LSI-2",
+            "state": "R",
+            "orientation": 1,
+            "accessible": true
+          }
+        },
+        "exact_recognition_signature_counts_both_strands": {
+          "LSI-1:B": 0,
+          "LSI-1:P": 0,
+          "LSI-1:L": 1,
+          "LSI-1:R": 1,
+          "LSI-2:B": 0,
+          "LSI-2:P": 0,
+          "LSI-2:L": 1,
+          "LSI-2:R": 1,
+          "LSI-3:B": 0,
+          "LSI-3:P": 0,
+          "LSI-3:L": 1,
+          "LSI-3:R": 1
+        },
+        "possible_cognate_events": [
+          {
+            "input_name": "A",
+            "system": "LSI-1",
+            "chemistry": "Int",
+            "pair_state": "LR",
+            "relative_orientation": "parallel",
+            "outcome": "inactive_pairing",
+            "intended": false,
+            "note": "LSI product sites are nominally inactive without cognate RDF; basal reverse activity must still be measured."
+          },
+          {
+            "input_name": "A",
+            "system": "LSI-1",
+            "chemistry": "Int+RDF",
+            "pair_state": "LR",
+            "relative_orientation": "parallel",
+            "outcome": "deletion",
+            "intended": false,
+            "note": "attL x attR direct-repeat recombination excises the interval."
+          },
+          {
+            "input_name": "B",
+            "system": "LSI-2",
+            "chemistry": "Int",
+            "pair_state": "LR",
+            "relative_orientation": "parallel",
+            "outcome": "inactive_pairing",
+            "intended": false,
+            "note": "LSI product sites are nominally inactive without cognate RDF; basal reverse activity must still be measured."
+          },
+          {
+            "input_name": "B",
+            "system": "LSI-2",
+            "chemistry": "Int+RDF",
+            "pair_state": "LR",
+            "relative_orientation": "parallel",
+            "outcome": "deletion",
+            "intended": false,
+            "note": "attL x attR direct-repeat recombination excises the interval."
+          },
+          {
+            "input_name": "C",
+            "system": "LSI-3",
+            "chemistry": "Int",
+            "pair_state": "LR",
+            "relative_orientation": "opposite",
+            "outcome": "inactive_pairing",
+            "intended": false,
+            "note": "LSI product sites are nominally inactive without cognate RDF; basal reverse activity must still be measured."
+          },
+          {
+            "input_name": "C",
+            "system": "LSI-3",
+            "chemistry": "Int+RDF",
+            "pair_state": "LR",
+            "relative_orientation": "opposite",
+            "outcome": "inversion",
+            "intended": true,
+            "note": "attL x attR intramolecular inverse inversion."
+          }
+        ],
+        "cross_system_events": "inactive in the ideal orthogonality model; pairwise enzyme-site and integrase-RDF crosstalk require empirical measurement",
+        "intermolecular_events": "not represented in the single-molecule state; any second construct copy creates possible cognate integration/cointegrate substrates"
+      },
+      {
+        "name": "reverse_1",
+        "active_input": "C",
+        "chemistry": "Int+RDF",
+        "sha256": "6c0b75e79d3ea29ee33472b6259a6634cf005bcf08f0d5f57c0d7f116f3d4301",
+        "length_bp": 766,
+        "physical_elements": [
+          "ORI+",
+          "S5(L,+)",
+          "D-",
+          "S4(inert,-)",
+          "C-",
+          "S3(B,-)",
+          "B-",
+          "S7(L,-)",
+          "F-",
+          "S6(P,+)",
+          "E-",
+          "S1(R,+)",
+          "A+",
+          "S2(R,+)"
+        ],
+        "payload_order": [
+          "-D",
+          "-C",
+          "-B",
+          "-F",
+          "-E",
+          "+A"
+        ],
+        "site_accessibility": {
+          "S5": {
+            "system": "LSI-1",
+            "state": "L",
+            "orientation": 1,
+            "accessible": true
+          },
+          "S4": {
+            "system": null,
+            "state": "inert",
+            "orientation": -1,
+            "accessible": false
+          },
+          "S3": {
+            "system": "LSI-3",
+            "state": "B",
+            "orientation": -1,
+            "accessible": true
+          },
+          "S7": {
+            "system": "LSI-2",
+            "state": "L",
+            "orientation": -1,
+            "accessible": true
+          },
+          "S6": {
+            "system": "LSI-3",
+            "state": "P",
+            "orientation": 1,
+            "accessible": true
+          },
+          "S1": {
+            "system": "LSI-1",
+            "state": "R",
+            "orientation": 1,
+            "accessible": true
+          },
+          "S2": {
+            "system": "LSI-2",
+            "state": "R",
+            "orientation": 1,
+            "accessible": true
+          }
+        },
+        "exact_recognition_signature_counts_both_strands": {
+          "LSI-1:B": 0,
+          "LSI-1:P": 0,
+          "LSI-1:L": 1,
+          "LSI-1:R": 1,
+          "LSI-2:B": 0,
+          "LSI-2:P": 0,
+          "LSI-2:L": 1,
+          "LSI-2:R": 1,
+          "LSI-3:B": 1,
+          "LSI-3:P": 1,
+          "LSI-3:L": 0,
+          "LSI-3:R": 0
+        },
+        "possible_cognate_events": [
+          {
+            "input_name": "A",
+            "system": "LSI-1",
+            "chemistry": "Int",
+            "pair_state": "LR",
+            "relative_orientation": "parallel",
+            "outcome": "inactive_pairing",
+            "intended": false,
+            "note": "LSI product sites are nominally inactive without cognate RDF; basal reverse activity must still be measured."
+          },
+          {
+            "input_name": "A",
+            "system": "LSI-1",
+            "chemistry": "Int+RDF",
+            "pair_state": "LR",
+            "relative_orientation": "parallel",
+            "outcome": "deletion",
+            "intended": false,
+            "note": "attL x attR direct-repeat recombination excises the interval."
+          },
+          {
+            "input_name": "B",
+            "system": "LSI-2",
+            "chemistry": "Int",
+            "pair_state": "LR",
+            "relative_orientation": "opposite",
+            "outcome": "inactive_pairing",
+            "intended": false,
+            "note": "LSI product sites are nominally inactive without cognate RDF; basal reverse activity must still be measured."
+          },
+          {
+            "input_name": "B",
+            "system": "LSI-2",
+            "chemistry": "Int+RDF",
+            "pair_state": "LR",
+            "relative_orientation": "opposite",
+            "outcome": "inversion",
+            "intended": true,
+            "note": "attL x attR intramolecular inverse inversion."
+          },
+          {
+            "input_name": "C",
+            "system": "LSI-3",
+            "chemistry": "Int",
+            "pair_state": "BP",
+            "relative_orientation": "opposite",
+            "outcome": "inversion",
+            "intended": true,
+            "note": "attB x attP intramolecular inversion."
+          },
+          {
+            "input_name": "C",
+            "system": "LSI-3",
+            "chemistry": "Int+RDF",
+            "pair_state": "BP",
+            "relative_orientation": "opposite",
+            "outcome": "inactive_pairing",
+            "intended": false,
+            "note": "Cognate RDF suppresses integration chemistry in the ideal model."
+          }
+        ],
+        "cross_system_events": "inactive in the ideal orthogonality model; pairwise enzyme-site and integrase-RDF crosstalk require empirical measurement",
+        "intermolecular_events": "not represented in the single-molecule state; any second construct copy creates possible cognate integration/cointegrate substrates"
+      },
+      {
+        "name": "reverse_2",
+        "active_input": "B",
+        "chemistry": "Int+RDF",
+        "sha256": "8b17dd4fc8d781351cbfaa0c7d97b4b30857985a5f67739a5edd15dff304e8fe",
+        "length_bp": 766,
+        "physical_elements": [
+          "ORI+",
+          "S5(L,+)",
+          "D-",
+          "S4(inert,-)",
+          "C-",
+          "S3(B,-)",
+          "B-",
+          "S2(B,-)",
+          "A-",
+          "S1(R,-)",
+          "E+",
+          "S6(P,-)",
+          "F+",
+          "S7(P,+)"
+        ],
+        "payload_order": [
+          "-D",
+          "-C",
+          "-B",
+          "-A",
+          "+E",
+          "+F"
+        ],
+        "site_accessibility": {
+          "S5": {
+            "system": "LSI-1",
+            "state": "L",
+            "orientation": 1,
+            "accessible": true
+          },
+          "S4": {
+            "system": null,
+            "state": "inert",
+            "orientation": -1,
+            "accessible": false
+          },
+          "S3": {
+            "system": "LSI-3",
+            "state": "B",
+            "orientation": -1,
+            "accessible": true
+          },
+          "S2": {
+            "system": "LSI-2",
+            "state": "B",
+            "orientation": -1,
+            "accessible": true
+          },
+          "S1": {
+            "system": "LSI-1",
+            "state": "R",
+            "orientation": -1,
+            "accessible": true
+          },
+          "S6": {
+            "system": "LSI-3",
+            "state": "P",
+            "orientation": -1,
+            "accessible": true
+          },
+          "S7": {
+            "system": "LSI-2",
+            "state": "P",
+            "orientation": 1,
+            "accessible": true
+          }
+        },
+        "exact_recognition_signature_counts_both_strands": {
+          "LSI-1:B": 0,
+          "LSI-1:P": 0,
+          "LSI-1:L": 1,
+          "LSI-1:R": 1,
+          "LSI-2:B": 1,
+          "LSI-2:P": 1,
+          "LSI-2:L": 0,
+          "LSI-2:R": 0,
+          "LSI-3:B": 1,
+          "LSI-3:P": 1,
+          "LSI-3:L": 0,
+          "LSI-3:R": 0
+        },
+        "possible_cognate_events": [
+          {
+            "input_name": "A",
+            "system": "LSI-1",
+            "chemistry": "Int",
+            "pair_state": "LR",
+            "relative_orientation": "opposite",
+            "outcome": "inactive_pairing",
+            "intended": false,
+            "note": "LSI product sites are nominally inactive without cognate RDF; basal reverse activity must still be measured."
+          },
+          {
+            "input_name": "A",
+            "system": "LSI-1",
+            "chemistry": "Int+RDF",
+            "pair_state": "LR",
+            "relative_orientation": "opposite",
+            "outcome": "inversion",
+            "intended": true,
+            "note": "attL x attR intramolecular inverse inversion."
+          },
+          {
+            "input_name": "B",
+            "system": "LSI-2",
+            "chemistry": "Int",
+            "pair_state": "BP",
+            "relative_orientation": "opposite",
+            "outcome": "inversion",
+            "intended": true,
+            "note": "attB x attP intramolecular inversion."
+          },
+          {
+            "input_name": "B",
+            "system": "LSI-2",
+            "chemistry": "Int+RDF",
+            "pair_state": "BP",
+            "relative_orientation": "opposite",
+            "outcome": "inactive_pairing",
+            "intended": false,
+            "note": "Cognate RDF suppresses integration chemistry in the ideal model."
+          },
+          {
+            "input_name": "C",
+            "system": "LSI-3",
+            "chemistry": "Int",
+            "pair_state": "BP",
+            "relative_orientation": "parallel",
+            "outcome": "deletion",
+            "intended": false,
+            "note": "attB x attP direct-repeat recombination excises the interval."
+          },
+          {
+            "input_name": "C",
+            "system": "LSI-3",
+            "chemistry": "Int+RDF",
+            "pair_state": "BP",
+            "relative_orientation": "parallel",
+            "outcome": "inactive_pairing",
+            "intended": false,
+            "note": "Cognate RDF suppresses integration chemistry in the ideal model."
+          }
+        ],
+        "cross_system_events": "inactive in the ideal orthogonality model; pairwise enzyme-site and integrase-RDF crosstalk require empirical measurement",
+        "intermolecular_events": "not represented in the single-molecule state; any second construct copy creates possible cognate integration/cointegrate substrates"
+      },
+      {
+        "name": "reverse_3",
+        "active_input": "A",
+        "chemistry": "Int+RDF",
+        "sha256": "47ad4b15ab0971444b9d24f3c952976ae6e78b6e5450ee57bc8a33e6485173af",
+        "length_bp": 766,
+        "physical_elements": [
+          "ORI+",
+          "S1(B,+)",
+          "A+",
+          "S2(B,+)",
+          "B+",
+          "S3(B,+)",
+          "C+",
+          "S4(inert,+)",
+          "D+",
+          "S5(P,-)",
+          "E+",
+          "S6(P,-)",
+          "F+",
+          "S7(P,+)"
+        ],
+        "payload_order": [
+          "+A",
+          "+B",
+          "+C",
+          "+D",
+          "+E",
+          "+F"
+        ],
+        "site_accessibility": {
+          "S1": {
+            "system": "LSI-1",
+            "state": "B",
+            "orientation": 1,
+            "accessible": true
+          },
+          "S2": {
+            "system": "LSI-2",
+            "state": "B",
+            "orientation": 1,
+            "accessible": true
+          },
+          "S3": {
+            "system": "LSI-3",
+            "state": "B",
+            "orientation": 1,
+            "accessible": true
+          },
+          "S4": {
+            "system": null,
+            "state": "inert",
+            "orientation": 1,
+            "accessible": false
+          },
+          "S5": {
+            "system": "LSI-1",
+            "state": "P",
+            "orientation": -1,
+            "accessible": true
+          },
+          "S6": {
+            "system": "LSI-3",
+            "state": "P",
+            "orientation": -1,
+            "accessible": true
+          },
+          "S7": {
+            "system": "LSI-2",
+            "state": "P",
+            "orientation": 1,
+            "accessible": true
+          }
+        },
+        "exact_recognition_signature_counts_both_strands": {
+          "LSI-1:B": 1,
+          "LSI-1:P": 1,
+          "LSI-1:L": 0,
+          "LSI-1:R": 0,
+          "LSI-2:B": 1,
+          "LSI-2:P": 1,
+          "LSI-2:L": 0,
+          "LSI-2:R": 0,
+          "LSI-3:B": 1,
+          "LSI-3:P": 1,
+          "LSI-3:L": 0,
+          "LSI-3:R": 0
+        },
+        "possible_cognate_events": [
+          {
+            "input_name": "A",
+            "system": "LSI-1",
+            "chemistry": "Int",
+            "pair_state": "BP",
+            "relative_orientation": "opposite",
+            "outcome": "inversion",
+            "intended": true,
+            "note": "attB x attP intramolecular inversion."
+          },
+          {
+            "input_name": "A",
+            "system": "LSI-1",
+            "chemistry": "Int+RDF",
+            "pair_state": "BP",
+            "relative_orientation": "opposite",
+            "outcome": "inactive_pairing",
+            "intended": false,
+            "note": "Cognate RDF suppresses integration chemistry in the ideal model."
+          },
+          {
+            "input_name": "B",
+            "system": "LSI-2",
+            "chemistry": "Int",
+            "pair_state": "BP",
+            "relative_orientation": "parallel",
+            "outcome": "deletion",
+            "intended": false,
+            "note": "attB x attP direct-repeat recombination excises the interval."
+          },
+          {
+            "input_name": "B",
+            "system": "LSI-2",
+            "chemistry": "Int+RDF",
+            "pair_state": "BP",
+            "relative_orientation": "parallel",
+            "outcome": "inactive_pairing",
+            "intended": false,
+            "note": "Cognate RDF suppresses integration chemistry in the ideal model."
+          },
+          {
+            "input_name": "C",
+            "system": "LSI-3",
+            "chemistry": "Int",
+            "pair_state": "BP",
+            "relative_orientation": "opposite",
+            "outcome": "inversion",
+            "intended": true,
+            "note": "attB x attP intramolecular inversion."
+          },
+          {
+            "input_name": "C",
+            "system": "LSI-3",
+            "chemistry": "Int+RDF",
+            "pair_state": "BP",
+            "relative_orientation": "opposite",
+            "outcome": "inactive_pairing",
+            "intended": false,
+            "note": "Cognate RDF suppresses integration chemistry in the ideal model."
+          }
+        ],
+        "cross_system_events": "inactive in the ideal orthogonality model; pairwise enzyme-site and integrase-RDF crosstalk require empirical measurement",
+        "intermolecular_events": "not represented in the single-molecule state; any second construct copy creates possible cognate integration/cointegrate substrates"
+      }
+    ]
+  },
+  "forward_order_permutations": [
+    {
+      "order": "ABC",
+      "events": [
+        {
+          "input_name": "A",
+          "system": "LSI-1",
+          "chemistry": "Int",
+          "pair_state": "BP",
+          "relative_orientation": "opposite",
+          "outcome": "inversion",
+          "intended": true,
+          "note": "attB x attP intramolecular inversion."
+        },
+        {
+          "input_name": "B",
+          "system": "LSI-2",
+          "chemistry": "Int",
+          "pair_state": "BP",
+          "relative_orientation": "opposite",
+          "outcome": "inversion",
+          "intended": true,
+          "note": "attB x attP intramolecular inversion."
+        },
+        {
+          "input_name": "C",
+          "system": "LSI-3",
+          "chemistry": "Int",
+          "pair_state": "BP",
+          "relative_orientation": "opposite",
+          "outcome": "inversion",
+          "intended": true,
+          "note": "attB x attP intramolecular inversion."
+        }
+      ],
+      "terminated_on_deletion": false,
+      "final_sha256_if_single_circle": "0984db90d882c71cb813f4799f3f8ab83b48af7475e504a7c506feaf16e69ab0",
+      "payload_order_if_single_circle": [
+        "-D",
+        "-C",
+        "+F",
+        "+B",
+        "-E",
+        "+A"
+      ]
+    },
+    {
+      "order": "ACB",
+      "events": [
+        {
+          "input_name": "A",
+          "system": "LSI-1",
+          "chemistry": "Int",
+          "pair_state": "BP",
+          "relative_orientation": "opposite",
+          "outcome": "inversion",
+          "intended": true,
+          "note": "attB x attP intramolecular inversion."
+        },
+        {
+          "input_name": "C",
+          "system": "LSI-3",
+          "chemistry": "Int",
+          "pair_state": "BP",
+          "relative_orientation": "parallel",
+          "outcome": "deletion",
+          "intended": false,
+          "note": "attB x attP direct-repeat recombination excises the interval."
+        }
+      ],
+      "terminated_on_deletion": true,
+      "final_sha256_if_single_circle": null,
+      "payload_order_if_single_circle": null
+    },
+    {
+      "order": "BAC",
+      "events": [
+        {
+          "input_name": "B",
+          "system": "LSI-2",
+          "chemistry": "Int",
+          "pair_state": "BP",
+          "relative_orientation": "parallel",
+          "outcome": "deletion",
+          "intended": false,
+          "note": "attB x attP direct-repeat recombination excises the interval."
+        }
+      ],
+      "terminated_on_deletion": true,
+      "final_sha256_if_single_circle": null,
+      "payload_order_if_single_circle": null
+    },
+    {
+      "order": "BCA",
+      "events": [
+        {
+          "input_name": "B",
+          "system": "LSI-2",
+          "chemistry": "Int",
+          "pair_state": "BP",
+          "relative_orientation": "parallel",
+          "outcome": "deletion",
+          "intended": false,
+          "note": "attB x attP direct-repeat recombination excises the interval."
+        }
+      ],
+      "terminated_on_deletion": true,
+      "final_sha256_if_single_circle": null,
+      "payload_order_if_single_circle": null
+    },
+    {
+      "order": "CAB",
+      "events": [
+        {
+          "input_name": "C",
+          "system": "LSI-3",
+          "chemistry": "Int",
+          "pair_state": "BP",
+          "relative_orientation": "opposite",
+          "outcome": "inversion",
+          "intended": true,
+          "note": "attB x attP intramolecular inversion."
+        },
+        {
+          "input_name": "A",
+          "system": "LSI-1",
+          "chemistry": "Int",
+          "pair_state": "BP",
+          "relative_orientation": "parallel",
+          "outcome": "deletion",
+          "intended": false,
+          "note": "attB x attP direct-repeat recombination excises the interval."
+        }
+      ],
+      "terminated_on_deletion": true,
+      "final_sha256_if_single_circle": null,
+      "payload_order_if_single_circle": null
+    },
+    {
+      "order": "CBA",
+      "events": [
+        {
+          "input_name": "C",
+          "system": "LSI-3",
+          "chemistry": "Int",
+          "pair_state": "BP",
+          "relative_orientation": "opposite",
+          "outcome": "inversion",
+          "intended": true,
+          "note": "attB x attP intramolecular inversion."
+        },
+        {
+          "input_name": "B",
+          "system": "LSI-2",
+          "chemistry": "Int",
+          "pair_state": "BP",
+          "relative_orientation": "parallel",
+          "outcome": "deletion",
+          "intended": false,
+          "note": "attB x attP direct-repeat recombination excises the interval."
+        }
+      ],
+      "terminated_on_deletion": true,
+      "final_sha256_if_single_circle": null,
+      "payload_order_if_single_circle": null
+    }
+  ],
+  "reverse_order_permutations": [
+    {
+      "order": "ABC",
+      "events": [
+        {
+          "input_name": "A",
+          "system": "LSI-1",
+          "chemistry": "Int+RDF",
+          "pair_state": "LR",
+          "relative_orientation": "parallel",
+          "outcome": "deletion",
+          "intended": false,
+          "note": "attL x attR direct-repeat recombination excises the interval."
+        }
+      ],
+      "terminated_on_deletion": true,
+      "final_sha256_if_single_circle": null,
+      "payload_order_if_single_circle": null
+    },
+    {
+      "order": "ACB",
+      "events": [
+        {
+          "input_name": "A",
+          "system": "LSI-1",
+          "chemistry": "Int+RDF",
+          "pair_state": "LR",
+          "relative_orientation": "parallel",
+          "outcome": "deletion",
+          "intended": false,
+          "note": "attL x attR direct-repeat recombination excises the interval."
+        }
+      ],
+      "terminated_on_deletion": true,
+      "final_sha256_if_single_circle": null,
+      "payload_order_if_single_circle": null
+    },
+    {
+      "order": "BAC",
+      "events": [
+        {
+          "input_name": "B",
+          "system": "LSI-2",
+          "chemistry": "Int+RDF",
+          "pair_state": "LR",
+          "relative_orientation": "parallel",
+          "outcome": "deletion",
+          "intended": false,
+          "note": "attL x attR direct-repeat recombination excises the interval."
+        }
+      ],
+      "terminated_on_deletion": true,
+      "final_sha256_if_single_circle": null,
+      "payload_order_if_single_circle": null
+    },
+    {
+      "order": "BCA",
+      "events": [
+        {
+          "input_name": "B",
+          "system": "LSI-2",
+          "chemistry": "Int+RDF",
+          "pair_state": "LR",
+          "relative_orientation": "parallel",
+          "outcome": "deletion",
+          "intended": false,
+          "note": "attL x attR direct-repeat recombination excises the interval."
+        }
+      ],
+      "terminated_on_deletion": true,
+      "final_sha256_if_single_circle": null,
+      "payload_order_if_single_circle": null
+    },
+    {
+      "order": "CAB",
+      "events": [
+        {
+          "input_name": "C",
+          "system": "LSI-3",
+          "chemistry": "Int+RDF",
+          "pair_state": "LR",
+          "relative_orientation": "opposite",
+          "outcome": "inversion",
+          "intended": true,
+          "note": "attL x attR intramolecular inverse inversion."
+        },
+        {
+          "input_name": "A",
+          "system": "LSI-1",
+          "chemistry": "Int+RDF",
+          "pair_state": "LR",
+          "relative_orientation": "parallel",
+          "outcome": "deletion",
+          "intended": false,
+          "note": "attL x attR direct-repeat recombination excises the interval."
+        }
+      ],
+      "terminated_on_deletion": true,
+      "final_sha256_if_single_circle": null,
+      "payload_order_if_single_circle": null
+    },
+    {
+      "order": "CBA",
+      "events": [
+        {
+          "input_name": "C",
+          "system": "LSI-3",
+          "chemistry": "Int+RDF",
+          "pair_state": "LR",
+          "relative_orientation": "opposite",
+          "outcome": "inversion",
+          "intended": true,
+          "note": "attL x attR intramolecular inverse inversion."
+        },
+        {
+          "input_name": "B",
+          "system": "LSI-2",
+          "chemistry": "Int+RDF",
+          "pair_state": "LR",
+          "relative_orientation": "opposite",
+          "outcome": "inversion",
+          "intended": true,
+          "note": "attL x attR intramolecular inverse inversion."
+        },
+        {
+          "input_name": "A",
+          "system": "LSI-1",
+          "chemistry": "Int+RDF",
+          "pair_state": "LR",
+          "relative_orientation": "opposite",
+          "outcome": "inversion",
+          "intended": true,
+          "note": "attL x attR intramolecular inverse inversion."
+        }
+      ],
+      "terminated_on_deletion": false,
+      "final_sha256_if_single_circle": "47ad4b15ab0971444b9d24f3c952976ae6e78b6e5450ee57bc8a33e6485173af",
+      "payload_order_if_single_circle": [
+        "+A",
+        "+B",
+        "+C",
+        "+D",
+        "+E",
+        "+F"
+      ]
+    }
+  ],
+  "nonideal_parameter_sweep": {
+    "warning": "These are deterministic sensitivity calculations, not empirical rate estimates; they exclude intermolecular recombination.",
+    "rows": [
+      {
+        "per_operation_completion": 0.9,
+        "message_copies": 1,
+        "possible_cognate_pairings_per_system": 1,
+        "intramolecular_pairings_per_system": 1,
+        "intermolecular_pairings_per_system": 0,
+        "intermolecular_fraction_if_all_pairings_equiprobable": 0.0,
+        "all_copies_correct_after_forward": 0.7290000000000001,
+        "all_copies_exact_after_round_trip": 0.531441
+      },
+      {
+        "per_operation_completion": 0.9,
+        "message_copies": 2,
+        "possible_cognate_pairings_per_system": 4,
+        "intramolecular_pairings_per_system": 2,
+        "intermolecular_pairings_per_system": 2,
+        "intermolecular_fraction_if_all_pairings_equiprobable": 0.5,
+        "all_copies_correct_after_forward": 0.531441,
+        "all_copies_exact_after_round_trip": 0.2824295364810001
+      },
+      {
+        "per_operation_completion": 0.9,
+        "message_copies": 5,
+        "possible_cognate_pairings_per_system": 25,
+        "intramolecular_pairings_per_system": 5,
+        "intermolecular_pairings_per_system": 20,
+        "intermolecular_fraction_if_all_pairings_equiprobable": 0.8,
+        "all_copies_correct_after_forward": 0.20589113209464907,
+        "all_copies_exact_after_round_trip": 0.04239115827521624
+      },
+      {
+        "per_operation_completion": 0.9,
+        "message_copies": 20,
+        "possible_cognate_pairings_per_system": 400,
+        "intramolecular_pairings_per_system": 20,
+        "intermolecular_pairings_per_system": 380,
+        "intermolecular_fraction_if_all_pairings_equiprobable": 0.95,
+        "all_copies_correct_after_forward": 0.001797010299914434,
+        "all_copies_exact_after_round_trip": 3.2292460179985636e-06
+      },
+      {
+        "per_operation_completion": 0.95,
+        "message_copies": 1,
+        "possible_cognate_pairings_per_system": 1,
+        "intramolecular_pairings_per_system": 1,
+        "intermolecular_pairings_per_system": 0,
+        "intermolecular_fraction_if_all_pairings_equiprobable": 0.0,
+        "all_copies_correct_after_forward": 0.8573749999999999,
+        "all_copies_exact_after_round_trip": 0.7350918906249998
+      },
+      {
+        "per_operation_completion": 0.95,
+        "message_copies": 2,
+        "possible_cognate_pairings_per_system": 4,
+        "intramolecular_pairings_per_system": 2,
+        "intermolecular_pairings_per_system": 2,
+        "intermolecular_fraction_if_all_pairings_equiprobable": 0.5,
+        "all_copies_correct_after_forward": 0.7350918906249998,
+        "all_copies_exact_after_round_trip": 0.5403600876626367
+      },
+      {
+        "per_operation_completion": 0.95,
+        "message_copies": 5,
+        "possible_cognate_pairings_per_system": 25,
+        "intramolecular_pairings_per_system": 5,
+        "intermolecular_pairings_per_system": 20,
+        "intermolecular_fraction_if_all_pairings_equiprobable": 0.8,
+        "all_copies_correct_after_forward": 0.46329123015975304,
+        "all_copies_exact_after_round_trip": 0.21463876394293727
+      },
+      {
+        "per_operation_completion": 0.95,
+        "message_copies": 20,
+        "possible_cognate_pairings_per_system": 400,
+        "intramolecular_pairings_per_system": 20,
+        "intermolecular_pairings_per_system": 380,
+        "intermolecular_fraction_if_all_pairings_equiprobable": 0.95,
+        "all_copies_correct_after_forward": 0.046069798986951946,
+        "all_copies_exact_after_round_trip": 0.0021224263786981585
+      },
+      {
+        "per_operation_completion": 0.99,
+        "message_copies": 1,
+        "possible_cognate_pairings_per_system": 1,
+        "intramolecular_pairings_per_system": 1,
+        "intermolecular_pairings_per_system": 0,
+        "intermolecular_fraction_if_all_pairings_equiprobable": 0.0,
+        "all_copies_correct_after_forward": 0.970299,
+        "all_copies_exact_after_round_trip": 0.941480149401
+      },
+      {
+        "per_operation_completion": 0.99,
+        "message_copies": 2,
+        "possible_cognate_pairings_per_system": 4,
+        "intramolecular_pairings_per_system": 2,
+        "intermolecular_pairings_per_system": 2,
+        "intermolecular_fraction_if_all_pairings_equiprobable": 0.5,
+        "all_copies_correct_after_forward": 0.941480149401,
+        "all_copies_exact_after_round_trip": 0.8863848717161292
+      },
+      {
+        "per_operation_completion": 0.99,
+        "message_copies": 5,
+        "possible_cognate_pairings_per_system": 25,
+        "intramolecular_pairings_per_system": 5,
+        "intermolecular_pairings_per_system": 20,
+        "intermolecular_fraction_if_all_pairings_equiprobable": 0.8,
+        "all_copies_correct_after_forward": 0.8600583546412884,
+        "all_copies_exact_after_round_trip": 0.7397003733882802
+      },
+      {
+        "per_operation_completion": 0.99,
+        "message_copies": 20,
+        "possible_cognate_pairings_per_system": 400,
+        "intramolecular_pairings_per_system": 20,
+        "intermolecular_pairings_per_system": 380,
+        "intermolecular_fraction_if_all_pairings_equiprobable": 0.95,
+        "all_copies_correct_after_forward": 0.5471566423907612,
+        "all_copies_exact_after_round_trip": 0.2993803913123313
+      },
+      {
+        "per_operation_completion": 0.999,
+        "message_copies": 1,
+        "possible_cognate_pairings_per_system": 1,
+        "intramolecular_pairings_per_system": 1,
+        "intermolecular_pairings_per_system": 0,
+        "intermolecular_fraction_if_all_pairings_equiprobable": 0.0,
+        "all_copies_correct_after_forward": 0.997002999,
+        "all_copies_exact_after_round_trip": 0.994014980014994
+      },
+      {
+        "per_operation_completion": 0.999,
+        "message_copies": 2,
+        "possible_cognate_pairings_per_system": 4,
+        "intramolecular_pairings_per_system": 2,
+        "intermolecular_pairings_per_system": 2,
+        "intermolecular_fraction_if_all_pairings_equiprobable": 0.5,
+        "all_copies_correct_after_forward": 0.994014980014994,
+        "all_copies_exact_after_round_trip": 0.9880657804942089
+      },
+      {
+        "per_operation_completion": 0.999,
+        "message_copies": 5,
+        "possible_cognate_pairings_per_system": 25,
+        "intramolecular_pairings_per_system": 5,
+        "intermolecular_pairings_per_system": 20,
+        "intermolecular_fraction_if_all_pairings_equiprobable": 0.8,
+        "all_copies_correct_after_forward": 0.985104546362002,
+        "all_copies_exact_after_round_trip": 0.9704309672630858
+      },
+      {
+        "per_operation_completion": 0.999,
+        "message_copies": 20,
+        "possible_cognate_pairings_per_system": 400,
+        "intramolecular_pairings_per_system": 20,
+        "intermolecular_pairings_per_system": 380,
+        "intermolecular_fraction_if_all_pairings_equiprobable": 0.95,
+        "all_copies_correct_after_forward": 0.9417362622231682,
+        "all_copies_exact_after_round_trip": 0.8868671875860638
+      }
+    ],
+    "overlap_without_state_gate": "If Step 1 completes with fraction p_A before active Step 2, the unswitched fraction (1-p_A) presents parallel Step-2 sites and is a deletion substrate.",
+    "overlap_with_single_copy_state_gate": "Drug B AND state-1 gating keeps Int-2 absent in unswitched cells; this logic fails on multicopy message DNA if one switched copy activates Int-2 while other copies remain unswitched."
+  },
+  "alternative_architecture_models": {
+    "large_serine_integrases": {
+      "deterministic_rule": "BP --Int--> LR; LR --Int+RDF--> BP",
+      "topology": {
+        "opposite_orientation": "inversion",
+        "parallel_orientation": "deletion/excision",
+        "different_molecules": "integration/cointegrate"
+      },
+      "exact_round_trip_modeled": true
+    },
+    "tyrosine_recombinases": {
+      "deterministic_rule": "homotypic sites remain substrates after inversion; continued enzyme exposure makes forward and reverse inversions reachable",
+      "topology": {
+        "opposite_orientation": "reversible inversion/oscillation",
+        "parallel_orientation": "deletion; reintegration is disfavored",
+        "different_molecules": "integration/translocation"
+      },
+      "exact_round_trip_modeled": "string-level inversion is exact, but a homogeneous endpoint is not deterministic without an additional locking mechanism"
+    },
+    "bridge_rna_recombinase": {
+      "deterministic_rule": "ideal targeted inversion can be represented as an exact string operation, but a validated product-to-substrate inverse program for this six-transition cycle was not established here",
+      "exact_round_trip_modeled": false,
+      "reason": "mechanistic and experimental evidence is not yet sufficient"
+    },
+    "crispr_dsb_repair": {
+      "deterministic_rule": "two cuts plus repair can yield inversion, deletion, indels, or other junctions; exact repair is not guaranteed",
+      "exact_round_trip_modeled": false,
+      "reason": "repair outcomes are intrinsically non-deterministic"
+    }
+  }
+}
